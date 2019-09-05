@@ -5,10 +5,8 @@ const requireDir = require("require-dir");
 const bdConfig = requireDir('').bd;
 var port = process.env.PORT || 8080;
 
-// var user = process.env['USER_MONGO'];
-// var pass = process.env['PASS_MONGO'];
-// var user = bdConfig.user;
-// var pass = bdConfig.pass;
+var user = process.env.HUNT_USER;
+var pass = process.env.HUNT_PASS;
 
 const app = express();
 app.use(express.json());
