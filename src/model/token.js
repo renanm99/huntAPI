@@ -6,10 +6,9 @@ const tokenSchema = new mongoose.Schema(
         email: { type: String, required: true, default: "" },
         isAvailable: {
             type: Boolean,
-            require: true,
             default: false
         },
-        createdAt: { type: Date, required: true, default: Date.now }
+        createdAt: { type: Date, default: Date.now }
     },
     { collection: "Token" }
 );

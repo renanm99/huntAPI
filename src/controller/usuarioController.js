@@ -10,5 +10,10 @@ module.exports = {
     async GetUser(req, res) {
         const a = await User.findById(req.params.id);
         res.send(a);
+    },
+    ////////// controles
+    async users(req,res){
+        const user = await User.find();
+        res.send(user);
     }
 };

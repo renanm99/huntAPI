@@ -6,6 +6,10 @@ const tokenController = require("./controller/tokenController");
 
 routes.post("/cadastro/usuario", usuarioController.userCreate);
 routes.get("/validar/token/:idtoken", tokenController.validarToken);
-routes.get("/teste/email",tokenController.enviarToken);
+routes.post("/teste/email", tokenController.enviarToken);
+
+///controles
+routes.get("/users",usuarioController.users)
+routes.get("/tokens",tokenController.tokens)
 
 module.exports = routes;
